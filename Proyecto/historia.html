@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="historia.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="Turbina.png" alt="logo de pagina" class="imgLogo">
+            <h2 class="Nombre">Energia Eolica</h2>
+        </div>
+        <nav>
+            <a href="pagina.html" class="navegador">Inicio</a>
+            <a href="historia.html" class="navegador">Historia</a>
+            <a href="datos.html" class="navegador">Informacion de produccion</a>
+            <a href="consumo.html" class="navegador">Consumo Energetico</a>
+        </nav>
+    </header>
+
+    <div class="informacion">
+        <h1>Informacion de nivel de instalacion de energia eolica en el mundo desde 1965 hasta 2022</h1>
+        <p>en la siguiente tabla podra visualizar la evolucion en la instalacion de la energia eolica en los diferentes
+            paises del mundo en los ultimos 40 años.</p>
+        <p> si desea buscar un pais en especifico, solamente digite el nombre en el apartado de buscar y la tabla
+            filtrara la informacion (tenga en cuenta que los paises tienen que ser digitados por su nombre en ingles)
+        </p>
+
+    </div>
+
+    <div>
+        <!-- Input para filtrar la tabla -->
+        <input type="text" id="searchInput" placeholder="Buscar..." onkeyup="filterTable()">
+
+        <!-- Contenedor de la tabla con scroll -->
+        <div class="table-container">
+            <table id="dataTable">
+                <thead>
+                    <tr id="tableHead"></tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="historia.js"></script>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Sección 1: Información de la empresa -->
+            <div class="footer-info">
+                <h3>Energia eolica</h3>
+                <p>&copy; 2025. Todos los derechos reservados.</p>
+            </div>
+    
+            <!-- Sección 2: Enlaces rápidos -->
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <!-- Sección 3: Redes sociales -->
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">LinkedIn</a>
+            </div>
+    
+        </div>
+    
+        <!-- Sección 5: Política de privacidad y términos -->
+        <div class="footer-bottom">
+            <a href="#">Política de Privacidad</a> | 
+            <a href="#">Términos y Condiciones</a>
+        </div>
+    </footer>
+</body>
+
+</html>

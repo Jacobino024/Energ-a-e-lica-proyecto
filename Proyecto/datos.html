@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="datos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            text-align: center;
+            padding: 20px;
+        }
+        canvas {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            padding: 10px;
+        }
+        h2 {
+            color: #2e7d32;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="Turbina.png" alt="logo de pagina" class="imgLogo">
+            <h2 class="Nombre">Energia Eolica</h2>
+        </div>
+        <nav>
+            <a href="pagina.html" class="navegador">Inicio</a>
+            <a href="historia.html" class="navegador">Historia</a>
+            <a href="datos.html" class="navegador">Informacion de produccion</a>
+            <a href="consumo.html" class="navegador">Consumo Energetico</a>
+        </nav>
+    </header>
+
+
+    <h2>Evolución de Generación de Energía Eólica</h2>
+    <canvas id="barChart" style="width:100%;max-width:600px"></canvas>
+    <canvas id="pieChart" style="width:100%;max-width:600px"></canvas>
+    <h2>Energia Eólica Acumulado por Año en Sur y Centro América de 2004 a 2021</h2>
+    <canvas id="lineChart" style="width:100%;max-width:600px"></canvas>
+    <canvas id="areaChart" style="width: 100%;max-width: 600px;"></canvas>
+    
+    <script>
+        const xValues = ["Colombia 2004", "Colombia 2005", "Colombia 2006", "Colombia 2007", "Colombia 2008", "Colombia 2009", "Colombia 2010", "Colombia 2011", "Colombia 2012", "Colombia 2013", "Colombia 2014", "Colombia 2015", "Colombia 2016", "Colombia 2017", "Colombia 2018", "Colombia 2019", "Colombia 2020", "Colombia 2021"];
+        const yValues = [0.05, 0.05, 0.06, 0.05, 0.05, 0.06, 0.04, 0.04, 0.05, 0.06, 0.07, 0.07, 0.05, 0.05, 0.04, 0.06, 0.01, 0.06];
+        const barColors = Array(xValues.length).fill("#4caf50");
+
+        new Chart("barChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+                title: { display: true, text: "Evolución de generación de energía eólica en Colombia por año" }
+            }
+        });
+
+        const ejeY = [0.10248002, 0.10133766, 0.11378722, 0.09225092, 0.09099181, 0.10743062, 0.07064641, 0.06788866, 0.08260367, 0.083102494, 0.10134646, 0.091851465, 0.067069076, 0, 0.050511427, 0.07678526, 0.012963443, 0.07415646];
+        const pieColors = ["#2e7d32", "#43a047", "#66bb6a", "#81c784", "#a5d6a7", "#c8e6c9", "#e8f5e9", "#388e3c", "#1b5e20", "#4caf50", "#66bb6a", "#81c784", "#a5d6a7", "#2e7d32", "#43a047", "#388e3c", "#1b5e20", "#c8e6c9"]; 
+
+        new Chart("pieChart", {
+            type: "pie",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: pieColors,
+                    data: ejeY
+                }]
+            },
+            options: {
+                title: { display: true, text: "Cantidad de energía eólica generada y compartida en Colombia desde 2004 hasta 2021" }
+            }
+        });
+
+        const ejeX2 = [
+            "Sur y centro america 1997", "Sur y centro america 1998", "Sur y centro america 1999",
+            "Sur y centro america 2000", "Sur y centro america 2001", "Sur y centro america 2002",
+            "Sur y centro america 2003", "Sur y centro america 2004", "Sur y centro america 2005",
+            "Sur y centro america 2006", "Sur y centro america 2007", "Sur y centro america 2008",
+            "Sur y centro america 2009", "Sur y centro america 2010", "Sur y centro america 2011",
+            "Sur y centro america 2012", "Sur y centro america 2013", "Sur y centro america 2014",
+            "Sur y centro america 2015", "Sur y centro america 2016", "Sur y centro america 2017",
+            "Sur y centro america 2018", "Sur y centro america 2019", "Sur y centro america 2020",
+            "Sur y centro america 2021"
+        ];
+
+        const ejeY2 = [
+            0.042, 0.066, 0.078, 0.090507, 0.134025, 0.136294, 0.152625, 0.196525, 0.193225,
+            0.411545, 0.452835, 0.619555, 1.101955, 1.484175, 2.19168, 3.067679, 3.685812, 
+            7.52532, 11.244941, 14.491529, 17.326365, 20.849562, 22.638688, 26.003164, 31.755342
+        ];
+
+        new Chart(document.getElementById("lineChart"), {
+            type: "line",
+            data: {
+                labels: ejeX2,
+                datasets: [{
+                    label: "crecimiento",
+                    fill: false,
+                    lineTension: 0,
+                    backgroundColor: "rgba(0,128,0,1.0)",
+                    borderColor: "rgba(0,128,0,0.5)",
+                    data: ejeY2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 35
+                    }
+                }
+            }
+        });
+
+        const years = [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]; // Reemplazar con datos dinámicos
+        const energyData = [0.051990, 0.049480, 0.062981, 0.049891, 0.053918, 0.057707813, 0.03856992, 0.041271944, 0.05485471, 0.057624802, 0.0702303, 0.06837745, 0.050887343, 0.003071419, 0.04344, 0.06332, 0.01012, 0.059852246]; // Reemplazar con datos dinámicos
+
+        new Chart(document.getElementById("areaChart"), {
+            type: "line",
+            data: {
+                labels: years,
+                datasets: [{
+                    label: "Generación de Energía eólica en Terawats Hora (TWh)",
+                    data: energyData,
+                    backgroundColor: "rgba(0, 200, 0, 0.3)",
+                    borderColor: "rgba(0, 128, 0, 1)",
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <!-- Sección 1: Información de la empresa -->
+            <div class="footer-info">
+                <h3>Energía Eólica</h3>
+                <p>&copy; 2025 . Todos los derechos reservados.</p>
+                
+            </div>
+    
+            <!-- Sección 2: Enlaces rápidos -->
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <!-- Sección 3: Redes sociales -->
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">LinkedIn</a>
+            </div>
+    
+        </div>
+    
+        <!-- Sección 5: Política de privacidad y términos -->
+        <div class="footer-bottom">
+            <a href="#">Política de Privacidad</a> | 
+            <a href="#">Términos y Condiciones</a>
+        </div>
+    </footer>
+</body>
+</html>

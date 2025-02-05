@@ -1,0 +1,189 @@
+body{
+    font-family:  'Times New Roman', Times, serif;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    gap: 20px;
+    min-height: 80px;
+    background-color: greenyellow;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.imgLogo{
+    height: 80px;
+    margin-right: 10px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: azure;
+    background-color: rgb(0, 0, 0)
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+    font-family:  'Times New Roman', Times, serif;
+    background-color: rgb(3, 221, 61);
+    border-radius: 15px;
+    padding: 1px;
+    margin: 25px;
+    border: 30px
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Input de carga y búsqueda */
+input {
+    margin: 10px;
+    padding: 8px;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Contenedor para el scroll */
+.table-container {
+    max-width: 90%;
+    max-height: 300px;
+    margin: 0 auto;
+    overflow: auto; /* Scroll horizontal y vertical */
+    border: 1px solid #ccc;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Encabezado de la tabla */
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Cambia color al pasar el mouse */
+tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+.informacion{
+    background-color: bisque;
+}
+
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-container div {
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-container h3, .footer-container h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a, .footer-social a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    text-decoration: underline;
+}
+
+.footer-subscription form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-subscription input {
+    padding: 8px;
+    width: 80%;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-subscription button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.footer-subscription button:hover {
+    background-color: #ff4500;
+}
+
+.footer-bottom {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
