@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gráficas</title>
     <link rel="stylesheet" href="datos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <style>
@@ -32,7 +32,7 @@
     <header>
         <div class="logo">
             <img src="Turbina.png" alt="logo de pagina" class="imgLogo">
-            <h2 class="Nombre">Energia Eolica</h2>
+            <h2 class="Nombre">Energía eólica</h2>
         </div>
         <nav>
             <a href="pagina.html" class="navegador">Inicio</a>
@@ -44,11 +44,11 @@
 
 
     <h2>Evolución de Generación de Energía Eólica</h2>
-    <canvas id="barChart" style="width:100%;max-width:600px"></canvas>
-    <canvas id="pieChart" style="width:100%;max-width:600px"></canvas>
-    <h2>Energia Eólica Acumulado por Año en Sur y Centro América de 2004 a 2021</h2>
-    <canvas id="lineChart" style="width:100%;max-width:600px"></canvas>
-    <canvas id="areaChart" style="width: 100%;max-width: 600px;"></canvas>
+    <canvas id="barChart" style="width:100%;max-width:100%"></canvas>
+    <canvas id="pieChart" style="width:100%;max-width:100%"></canvas>
+    <h2>Energía eólica Acumulada por Año en Sur y Centro América de 2004 a 2021</h2>
+    <canvas id="lineChart" style="width:100%;max-width:100%"></canvas>
+    <canvas id="areaChart" style="width: 100%;max-width: 100%;"></canvas>
     
     <script>
         const xValues = ["Colombia 2004", "Colombia 2005", "Colombia 2006", "Colombia 2007", "Colombia 2008", "Colombia 2009", "Colombia 2010", "Colombia 2011", "Colombia 2012", "Colombia 2013", "Colombia 2014", "Colombia 2015", "Colombia 2016", "Colombia 2017", "Colombia 2018", "Colombia 2019", "Colombia 2020", "Colombia 2021"];
@@ -140,7 +140,7 @@
             data: {
                 labels: years,
                 datasets: [{
-                    label: "Generación de Energía eólica en Terawats Hora (TWh)",
+                    label: "Generación de energía eólica en Terawats Hora (TWh)",
                     data: energyData,
                     backgroundColor: "rgba(0, 200, 0, 0.3)",
                     borderColor: "rgba(0, 128, 0, 1)",
@@ -169,7 +169,7 @@
         <div class="footer-container">
             <!-- Sección 1: Información de la empresa -->
             <div class="footer-info">
-                <h3>Energía Eólica</h3>
+                <h3>Energía eólica</h3>
                 <p>&copy; 2025 . Todos los derechos reservados.</p>
                 
             </div>

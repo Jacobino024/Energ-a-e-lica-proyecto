@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora de consumo</title>
     <link rel="stylesheet" href="consumo.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="Turbina.png" alt="logo de pagina" class="imgLogo">
-            <h2 class="Nombre">Energia Eolica</h2>
+            <h2 class="Nombre">Energía eólica</h2>
         </div>
         <nav>
             <a href="pagina.html" class="navegador">Inicio</a>
@@ -89,14 +89,14 @@
             const consumoM = parseFloat(document.getElementById('consUsuaMensual').value);
             let consuTW = (consumoM / 1000000) * 12;
             let consumoT = (consuTW * 100) / valorArchivo;
-            document.getElementById('resultado').innerHTML = ` Su consumo total en base a TWh  es un Consumo Total del: ${consumoT.toFixed(2)}%`;
+            document.getElementById('resultado').innerHTML = ` El porcentaje de consumo de energía renovable es del: ${consumoT.toFixed(2)}%`;
         })
     </script>
     <footer>
         <div class="footer-container">
             <!-- Sección 1: Información de la empresa -->
             <div class="footer-info">
-                <h3>Energía Eólica</h3>
+                <h3>Energía eólica</h3>
                 <p>&copy; 2025. Todos los derechos reservados.</p>
              
             </div>

@@ -41,7 +41,7 @@ a{
     color: black;
     font-size: medium;
     font-family:  'Times New Roman', Times, serif;
-    background-color: rgb(3, 221, 61);
+    background-color: rgb(70, 255, 70);
     border-radius: 15px;
     padding: 1px;
     margin: 25px;
@@ -106,8 +106,8 @@ tbody tr:hover {
 
 
 footer {
-    background-color: #222;
-    color: #fff;
+    background-color: bisque;
+    color: #000000;
     padding: 20px 0;
     text-align: center;
 }
@@ -121,7 +121,7 @@ footer {
 }
 
 .footer-container div {
-    margin: 10px;
+    margin: 5px;
     min-width: 200px;
 }
 
@@ -141,10 +141,11 @@ footer {
 .footer-links a, .footer-social a {
     color: #fff;
     text-decoration: none;
+    background-color: burlywood;
 }
 
 .footer-links a:hover, .footer-social a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .footer-subscription form {
@@ -175,7 +176,7 @@ footer {
 }
 
 .footer-bottom {
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 14px;
 }
 
